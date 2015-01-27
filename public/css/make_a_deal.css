@@ -1,0 +1,12 @@
+body {
+  background: #333;
+  color: white;
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+img {
+  margin: 0 30px;
+}
+a {
+  font-weight: normal !important;
+}
