@@ -7,3 +7,12 @@ body {
   padding: 10px 30px;
   margin-top: 40px;
 }
+#colorInfo {
+  width: 300px;
+  height: 60px;
+  background: white;
+  margin: 50px auto 0 auto;
+}
+#colorInfo div {
+  padding: 2% 0;
+}

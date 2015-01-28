@@ -8,7 +8,7 @@ require('./routes')(app);
 
 // create a write stream (in append mode)
 if (process.env.PORT != 3000){
-  var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+  var accessLogStream = fs.createWriteStream('/var/access.log', {flags: 'a'});
   app.use(morgan('short', {stream: accessLogStream}));
 } else {
   app.use(morgan('short'));
