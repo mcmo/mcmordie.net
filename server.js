@@ -7,12 +7,16 @@ var express = require('express'),
 require('./routes')(app);
 
 // create a write stream (in append mode)
-var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+if (process.env.PORT != 3000){
+  var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'});
+  app.use(morgan('short', {stream: accessLogStream}));
+} else {
+  app.use(morgan('short'));
+}  
 
 app.engine('.html', exphbs({defaultLayout: 'single', extname: '.html'}));
 app.set('view engine', '.html');
 
-app.use(morgan('short', {stream: accessLogStream}));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
@@ -30,7 +34,7 @@ app.all('*', function(req, res) {
 });
 
 var server = app.listen(process.env.PORT || 80, function() {
-
+  
   var host = server.address().address;
   var port = server.address().port;
 

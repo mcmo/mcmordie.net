@@ -17,5 +17,9 @@ module.exports = function(app){
   app.get('/day2/:final', function(req, res){
     res.render('day2/' + req.params.final, options);
   });
+  
+  app.get('/day3/random_background', function(req, res){
+    res.render('day3/random_background', {title: 'Random Color Background | Chris Learns JS', style: 'random_background', js: '/js/random_background.js'});
+  });
 
 };

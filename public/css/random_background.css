@@ -1,0 +1,9 @@
+body {
+  background-color: #fff18e;
+  text-align: center;
+}
+#click-me {
+  font-size: 30px;
+  padding: 10px 30px;
+  margin-top: 40px;
+}
