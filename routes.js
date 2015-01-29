@@ -26,4 +26,8 @@ module.exports = function(app){
     res.render('4/mondrian', {title: 'Mondrian | Chris Learns JS', style: 'mondrian', js: '/js/mondrian.js'});
   });  
 
+  app.get('/5/secret_message', function(req, res){
+    res.render('5/secret_message', {title: 'Secret Message | Chris Learns JS', style: 'secret_message', js: '/js/secret_message.js'});
+  });  
+
 };
