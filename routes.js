@@ -21,5 +21,9 @@ module.exports = function(app){
   app.get('/day3/random_background', function(req, res){
     res.render('day3/random_background', {title: 'Random Color Background | Chris Learns JS', style: 'random_background', js: '/js/random_background.js'});
   });
+  
+  app.get('/day4/mondrian', function(req, res){
+    res.render('day4/mondrian', {title: 'Mondrian | Chris Learns JS', style: 'mondrian', js: '/js/mondrian.js'});
+  });  
 
 };

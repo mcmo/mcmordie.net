@@ -1,0 +1,51 @@
+body {
+  background-color: lightgray;
+  text-align: center;
+}
+#header {
+  height: 70px;
+}
+#board {
+  height: 500px;
+  width: 700px;
+  background-color: lightyellow;
+  border: 3px solid black;
+  padding: 50px;
+  margin: 0 auto;
+}
+#color-section {
+  float: left;
+  width: 150px;
+}
+#board #span-selected {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.color, .selected {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.blue { background-color: blue; }
+.white { background-color: white; }
+
+#grid {
+  width: 402px;
+  height: 402px;
+  background-color: white;
+  border: 1px solid black;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.cell {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  border: 1px solid black;
+}
