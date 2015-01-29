@@ -3,6 +3,7 @@
 
 // Run button configuration
   "commands": {
+        "Set Port": "export PORT=3000",
         "Node version": "node --version"
   },
 
