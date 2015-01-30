@@ -32,6 +32,9 @@ module.exports = function(app){
 
   app.get('/6/day_tracker', function(req, res){
     res.render('6/day_tracker', {title: 'Day Tracker | Chris Learns JS', style: 'day_tracker', js: '/js/day_tracker.js'});
-  });  
+  });
+  app.get('/7/technicolor_boxes', function(req, res){
+    res.render('7/technicolor_boxes', {title: 'Technicolor Boxes | Chris Learns JS', style: 'technicolor_boxes', js: '/js/technicolor_boxes.js'});
+  });   
 
 };
