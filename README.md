@@ -1,4 +1,4 @@
-I am making **one website per weekday** as I learn to program.  My focus is on Javascript.
+I am making **one website a day** as I learn to program.  My focus is on Javascript.
 
 See the results at <a href="http://mcmordie.net/" target="_blank">mcmordie.net</a>
 

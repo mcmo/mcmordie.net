@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+}
+#week {
+  height: 125px;
+  width: 700px;
+  background-color: gold;
+  margin: -20px 0 0 0;
+  padding: 0;
+  position: relative;
+}
+#week ul {
+  width: 700px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+#week li {
+  display: block;
+  float: left;
+  padding: 5px 25px;  
+  font-size: 22px;
+  width: 100px;
+}
+#vertical {
+  position: relative;
+  top: -175px;
+  left: 0;
+  height: 375px;
+  width: 100px;
+  background-color: rgb(26,179,133);
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+#horizontal {
+  position: absolute;
+  top: 375px;
+  height: 100px;
+  width: 700px;
+  background-color: rgb(26,179,133);
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+#day, #saying {
+  color: white;
+  font-size: 34px;
+}
+#day {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  z-index: 1;
+}
+#saying {
+  height: 100px;
+  margin-top: 25px;
+}

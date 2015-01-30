@@ -30,4 +30,8 @@ module.exports = function(app){
     res.render('5/secret_message', {title: 'Secret Message | Chris Learns JS', style: 'secret_message', js: '/js/secret_message.js'});
   });  
 
+  app.get('/6/day_tracker', function(req, res){
+    res.render('6/day_tracker', {title: 'Day Tracker | Chris Learns JS', style: 'day_tracker', js: '/js/day_tracker.js'});
+  });  
+
 };
