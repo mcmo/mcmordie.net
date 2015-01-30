@@ -36,5 +36,8 @@ module.exports = function(app){
   app.get('/7/technicolor_boxes', function(req, res){
     res.render('7/technicolor_boxes', {title: 'Technicolor Boxes | Chris Learns JS', style: 'technicolor_boxes', js: '/js/technicolor_boxes.js'});
   });   
+  app.get('/8/more_drop_shadow', function(req, res){
+    res.render('8/more_drop_shadow', {title: 'More Drop Shadow! | Chris Learns JS', style: 'more_drop_shadow', js: '/js/more_drop_shadow.js'});
+  });   
 
 };
