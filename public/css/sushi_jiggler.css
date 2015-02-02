@@ -1,0 +1,18 @@
+#board {
+  min-width: 640px;
+  margin: 0 auto;
+}
+.sushi {
+  cursor: pointer;
+  margin: 20px;
+}
+.spin {
+  -webkit-animation: spin 3s;
+  animation: spin 2s;  
+}
+
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(0deg);}
+  10% {-webkit-transform: rotate(-90deg);}
+  100% {-webkit-transform: rotate(2880deg);}
+}

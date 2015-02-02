@@ -14,8 +14,8 @@
   border-radius: 50%;
   height: 120px;
   width: 120px;
-  -webkit-animation: bounce 4s infinite;
-  animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite linear;
+  animation: bounce 4s infinite linear;
   cursor: crosshair;
 }
 #result {

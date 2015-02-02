@@ -40,7 +40,14 @@ module.exports = function(app){
     res.render('8/more_drop_shadow', {title: 'More Drop Shadow! | Chris Learns JS', style: 'more_drop_shadow', js: '/js/more_drop_shadow.js'});
   });   
   app.get('/9/bouncing_ball', function(req, res){
-    res.render('9/bouncing_ball', {title: 'Bouncing BAll | Chris Learns JS', style: 'bouncing_ball', js: '/js/bouncing_ball.js'});
+    res.render('9/bouncing_ball', {title: 'Bouncing Ball | Chris Learns JS', style: 'bouncing_ball', js: '/js/bouncing_ball.js'});
+  });   
+  app.get('/10/sushi_jiggler', function(req, res){
+    fs = require('fs');
+    var f;
+    fs.readdir(__dirname + '/public/img/10', function(err, files){
+      res.render('10/sushi_jiggler', {sushi: files, title: 'Sushi Jiggler | Chris Learns JS', style: 'sushi_jiggler', js: '/js/sushi_jiggler.js'});
+    });
   });   
 
 };

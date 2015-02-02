@@ -21,8 +21,8 @@ $(document).ready(function() {
   function msg() {
     $('#message').hide();
     $('#level').hide();
-    $('#ball').css('-webkit-animation', 'bounce ' + speed + 's infinite');
-    $('#ball').css('animation', 'bounce ' + speed + 's infinite');
+    $('#ball').css('-webkit-animation', 'bounce ' + speed + 's infinite linear');
+    $('#ball').css('animation', 'bounce ' + speed + 's infinite linear');
     $('#ball').show();
   }
 
