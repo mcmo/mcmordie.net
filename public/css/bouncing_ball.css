@@ -1,0 +1,35 @@
+#stage {
+  position: absolute;
+  top: 50px;
+  height: 570px;
+  width: 240px;
+  left: 50%;
+  border-bottom: 1px dotted lightgray;
+}
+#ball {
+  position: absolute;
+  left: 60px;
+  display: block;
+  background: DarkCyan;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  -webkit-animation: bounce 4s infinite;
+  animation: bounce 4s infinite;
+  cursor: crosshair;
+}
+#result {
+  position: absolute;
+  left: 60px;
+  top: 200px;
+}
+@-webkit-keyframes bounce {
+  0% { top: 0px; }
+  50% { top: 450px;}
+  100% { top: 0px; }
+}
+@keyframes bounce {
+  0% { top: -20px; }
+  50% { top: 450px;}
+  100% { top: -20px; }
+}

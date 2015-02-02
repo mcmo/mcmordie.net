@@ -39,5 +39,8 @@ module.exports = function(app){
   app.get('/8/more_drop_shadow', function(req, res){
     res.render('8/more_drop_shadow', {title: 'More Drop Shadow! | Chris Learns JS', style: 'more_drop_shadow', js: '/js/more_drop_shadow.js'});
   });   
+  app.get('/9/bouncing_ball', function(req, res){
+    res.render('9/bouncing_ball', {title: 'Bouncing BAll | Chris Learns JS', style: 'bouncing_ball', js: '/js/bouncing_ball.js'});
+  });   
 
 };
