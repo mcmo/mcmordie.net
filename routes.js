@@ -52,5 +52,9 @@ module.exports = function(app){
   app.get('/11/color_clock', function(req, res){
     res.render('11/color_clock', {title: 'Color Clock | Chris Learns JS', style: 'color_clock', js: '/js/color_clock.js'});
   });   
+  app.get('/12/dice_roller', function(req, res){
+    res.render('12/dice_roller', {title: 'Dice Roller | Chris Learns JS', style: 'dice_roller', js: '/js/dice_roller.js'});
+  });   
 
+  
 };
