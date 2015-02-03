@@ -1,0 +1,61 @@
+body {
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+#left-side, #right-side {
+  position: relative;
+  width: 42%;
+  height: 500px;
+  text-align: center;
+  float: left;
+}
+#message {
+  position: relative;
+  width: 75px;
+  height: 500px;
+  float: left;
+  color: green;
+  font-size: 25px;
+  top: 150px;
+}
+#left-side img {
+  position: relative;
+}
+#right-side img {
+  position: relative;
+  float: right;
+}
+.name {
+  color: darkred;
+  border-bottom: 2px solid lightblue;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+div#buttons {
+  margin-top: 50px;
+  float: right;
+}
+button {
+  margin-left: 10px;
+  width: 85px;
+  height: 40px;
+  color: black;
+  letter-spacing: 1px;
+  background-color: skyblue;
+  font-weight: bold;
+}
+img {
+  height: 256px;
+}
+.shake {
+  -webkit-animation: shake .6s 3;
+  animation: shake .6s 3;  
+}
+@-webkit-keyframes shake {
+  0% {top: 0px;}
+  25% {top: -20px;}
+  50% {top: 0px;}
+  75% {top: 20px;}
+  100% {top: 0px;}  
+}

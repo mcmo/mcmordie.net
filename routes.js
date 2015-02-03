@@ -55,6 +55,8 @@ module.exports = function(app){
   app.get('/12/dice_roller', function(req, res){
     res.render('12/dice_roller', {title: 'Dice Roller | Chris Learns JS', style: 'dice_roller', js: '/js/dice_roller.js'});
   });   
-
+  app.get('/13/rock_paper_scissors', function(req, res){
+    res.render('13/rock_paper_scissors', {title: 'Rock Paper Scissors | Chris Learns JS', style: 'rock_paper_scissors', js: '/js/rock_paper_scissors.js'});
+  });
   
 };
