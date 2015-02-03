@@ -3,8 +3,11 @@ $(document).ready(function() {
     initialSpeed = 4.5,
     speed = initialSpeed,
     t;
+  
+  // workaround for 300ms click delay on mobile
+  var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
 
-  $('#ball').on('click', function() {
+  $('#ball').on(clickOrTouch, function() {
     $(this).hide();
     $('#message').text(messages[(level++) - 1]).show();
 
