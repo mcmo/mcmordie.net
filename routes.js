@@ -58,5 +58,8 @@ module.exports = function(app){
   app.get('/13/rock_paper_scissors', function(req, res){
     res.render('13/rock_paper_scissors', {title: 'Rock Paper Scissors | Chris Learns JS', style: 'rock_paper_scissors', js: '/js/rock_paper_scissors.js'});
   });
+  app.get('/14/tough_love', function(req, res){
+    res.render('14/tough_love', {title: 'Tough Love | Chris Learns JS', style: 'tough_love', js: '/js/tough_love.js'});
+  });  
   
 };

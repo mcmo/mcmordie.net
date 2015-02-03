@@ -1,0 +1,21 @@
+body {
+  background: ivory;
+  margin: 25px auto;
+  letter-spacing: 2px;
+  text-align: center;
+}
+h1 {
+  height: 250px;
+}
+#input {
+  height: 40px; 
+  padding-left: 10px;
+  width: 350px;
+  display: inline;
+  font-size: 18px;
+}
+#submit {
+  font-size: 18px;
+  width: 100px;
+  height: 40px; 
+}
