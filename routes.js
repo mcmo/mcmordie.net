@@ -49,5 +49,8 @@ module.exports = function(app){
       res.render('10/sushi_jiggler', {sushi: files, title: 'Sushi Jiggler | Chris Learns JS', style: 'sushi_jiggler', js: '/js/sushi_jiggler.js'});
     });
   });   
+  app.get('/11/color_clock', function(req, res){
+    res.render('11/color_clock', {title: 'Color Clock | Chris Learns JS', style: 'color_clock', js: '/js/color_clock.js'});
+  });   
 
 };
