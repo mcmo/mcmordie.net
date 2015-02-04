@@ -1,0 +1,33 @@
+body {
+  padding-top: 30px;
+  background-color: linen;
+}
+body > .container {
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#header {
+  height: 100px;
+  background-color: snow;
+  border-bottom: 3px solid lightgray;
+  margin-bottom: 25px;
+}
+h2 {
+  position: relative;
+  top: 33px;
+  color: purple;
+  font-weight: bold;
+}
+form input {
+  margin-right: 20px; 
+}
+#button {
+  font-size: 17px;
+}
+#message {
+  font-weight: bold;
+  line-height: 1.7;
+}

@@ -1,9 +1,9 @@
 $(document).ready(function() {
   var level = 1,
-    initialSpeed = 4.5,
+    initialSpeed = 4,
     speed = initialSpeed,
-    t;
-  
+    t, clicks = 0;
+
   // workaround for 300ms click delay on mobile
   var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
 
@@ -12,13 +12,17 @@ $(document).ready(function() {
     $('#message').text(messages[(level++) - 1]).show();
 
     if (level < 12) {
-      speed = level < 9 ? initialSpeed - (level - 1) * 0.5 : speed - 0.1;
+      speed = level < 8 ? initialSpeed - (level - 1) * 0.5 : speed - 0.1;
       $('#level').text('Next Level: ' + level).show();
-      t = setTimeout(msg, 1000);
+      t = setTimeout(msg, 2000);
     } else {
       $('#level').text('Game Over!').show();
       stopMsg();
     }
+  });
+
+  $('body').on(clickOrTouch, function() {
+    $('#clicks').text(++clicks);
   });
 
   function msg() {
