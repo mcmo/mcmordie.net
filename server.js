@@ -21,13 +21,10 @@ app.set('view engine', '.html');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  res.render('index', {title: 'Chris Learns JS', index:'active'});
+  res.render('index', {title: 'Chris Learns JS', index:'active', description: "Howdy! I'm Chris McMordie and I am building one website a day as I learn to program."});
 });
 app.get('/about', function(req, res) {
   res.render('about', {title: 'About - Chris Learns JS', about:'active'});
-});
-app.get('/blog', function(req, res) {
-  res.render('blog', {title: 'Blog - Chris Learns JS'});
 });
 
 app.all('*', function(req, res) { 

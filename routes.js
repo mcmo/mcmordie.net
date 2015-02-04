@@ -61,5 +61,4 @@ module.exports = function(app){
   app.get('/14/tough_love', function(req, res){
     res.render('14/tough_love', {title: 'Tough Love | Chris Learns JS', style: 'tough_love', js: '/js/tough_love.js'});
   });  
-  
 };
