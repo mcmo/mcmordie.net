@@ -63,5 +63,8 @@ module.exports = function(app){
   });  
   app.get('/17/party_time', function(req, res){
     res.render('17/party_time', {title: 'Party Time | Chris Learns JS', style: 'party_time', js: '/js/party_time.js'});
+  });
+  app.get('/22/keep_it_straight', function(req, res){
+    res.render('22/keep_it_straight', {title: 'Keep It Straight | Chris Learns JS', style: 'keep_it_straight', js: '/js/keep_it_straight.js'});
   });  
 };
