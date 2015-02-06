@@ -1,15 +1,22 @@
 $(document).ready(function() {
   var ms = 0; // keep track of time in milliseconds
-  var timer;  // allow start/stop timer
+  var timer; // allow start/stop timer
 
-  $('#start').on('click', function() {
+  $('#start-stop').on('click', function() {
+
+    if ($('#start-stop').text() == 'Stop') {
+      clearInterval(timer);
+      $('#start-stop').text('Start').removeClass('btn-danger').addClass('btn-success');
+      return;
+    }
+
+    $('#start-stop').text('Stop').removeClass('btn-success').addClass('btn-danger');
+
 
     timer = setInterval(function() {
       startTimer();
     }, 100);
 
-    $('#start').attr('disabled', true);
-    $('#stop').attr('disabled', false);
     $('#reset').attr('disabled', false);
 
     function startTimer() {
@@ -23,7 +30,7 @@ $(document).ready(function() {
     var h = addZero(d.getUTCHours());
     var m = addZero(d.getUTCMinutes());
     var s = addZero(d.getUTCSeconds());
-    var tenths = d.getUTCMilliseconds().toString().substr(0,1);
+    var tenths = d.getUTCMilliseconds().toString().substr(0, 1);
 
     $('#hours').text(h);
     $('#minutes').text(m);
@@ -31,17 +38,10 @@ $(document).ready(function() {
     $('#tenths').text(tenths);
   }
 
-  $('#stop').on('click', function() {
-    clearInterval(timer);
-    $('#start').attr('disabled', false);
-    $('#stop').attr('disabled', true);
-  });
-
   $('#reset').on('click', function() {
     clearInterval(timer);
-    $('#start').attr('disabled', false);
-    $('#stop').attr('disabled', true);
     $('#reset').attr('disabled', true);
+    $('#start-stop').text('Start').removeClass('btn-danger').addClass('btn-success');
     ms = 0;
     display(ms);
   });
