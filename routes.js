@@ -67,4 +67,7 @@ module.exports = function(app){
   app.get('/22/keep_it_straight', function(req, res){
     res.render('22/keep_it_straight', {title: 'Keep It Straight | Chris Learns JS', style: 'keep_it_straight', js: '/js/keep_it_straight.js'});
   });  
+  app.get('/23/stopwatch', function(req, res){
+    res.render('23/stopwatch', {title: 'Stopwatch | Chris Learns JS', style: 'stopwatch', js: '/js/stopwatch.js'});
+  });  
 };

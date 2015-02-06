@@ -1,0 +1,32 @@
+/* @font-face {
+    font-family: ds-digi;
+    src: url(fonts/ds-digi.ttf);
+} */
+@font-face {
+    font-family: digital-7-mono;
+    src: url(fonts/digital-7.mono.ttf);
+}
+.no-space {
+  margin: 0 -20px;
+}
+#stopwatch {
+  font-family: digital-7-mono;
+  font-size: 12em;
+  height: 1em;
+  text-align: center;
+  margin-bottom: 80px;
+}
+#buttons {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+button {
+  margin: 0 20px;
+  width: 100px;
+  height: 40px;
+}
+.btn {
+  color: black;
+  font-size: 20px;  
+}
