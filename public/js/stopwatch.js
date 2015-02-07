@@ -2,7 +2,10 @@ $(document).ready(function() {
   var ms = 0; // keep track of time in milliseconds
   var timer; // allow start/stop timer
 
-  $('#start-stop').on('click', function() {
+  // workaround for 300ms click delay on mobile
+  var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+  
+  $('#start-stop').on(clickOrTouch, function() {
 
     if ($('#start-stop').text() == 'Stop') {
       clearInterval(timer);
@@ -38,7 +41,7 @@ $(document).ready(function() {
     $('#tenths').text(tenths);
   }
 
-  $('#reset').on('click', function() {
+  $('#reset').on(clickOrTouch, function() {
     clearInterval(timer);
     $('#reset').attr('disabled', true);
     $('#start-stop').text('Start').removeClass('btn-danger').addClass('btn-success');
