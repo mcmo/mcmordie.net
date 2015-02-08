@@ -42,6 +42,29 @@ module.exports = function(app){
   app.get('/9/bouncing_ball', function(req, res){
     res.render('9/bouncing_ball', {title: 'Bouncing Ball | Chris Learns JS', style: 'bouncing_ball', js: '/js/bouncing_ball.js'});
   });   
+  app.get('/9/getMinClicks', function(req, res){
+    fs = require('fs');
+    var obj;
+    fs.readFile('views/9/data.json', function(err, data){
+      if (err) return console.log(err);
+      // obj = JSON.parse(data);
+      console.log(data);
+      res.send(data);
+    });
+  });
+  
+  app.get('/9/setMinClicks', function(req, res){
+    fs = require('fs');
+    var minClicks = {"minClicks": req.query.clicks, "minSeconds": req.query.seconds, "device": req.query.device};
+    var val = JSON.stringify(minClicks);
+    console.log(val);
+    fs.writeFile('views/9/data.json', val, function(err) {
+      if (err) return console.log(err);
+      console.log(val);
+      res.send(minClicks);
+    });
+  });
+  
   app.get('/10/sushi_jiggler', function(req, res){
     fs = require('fs');
     var f;
@@ -68,6 +91,6 @@ module.exports = function(app){
     res.render('22/keep_it_straight', {title: 'Keep It Straight | Chris Learns JS', style: 'keep_it_straight', js: '/js/keep_it_straight.js'});
   });  
   app.get('/23/stopwatch', function(req, res){
-    res.render('23/stopwatch', {title: 'Stopwatch | Chris Learns JS', style: 'stopwatch', js: '/js/stopwatch.js'});
+    res.render('23/stopwatch', {title: 'Stopwatch | Chris Learns JS', style: 'stopwatch', js: '/js/stopwatch.js' });
   });  
 };

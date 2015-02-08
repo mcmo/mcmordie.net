@@ -17,11 +17,20 @@
   -webkit-animation: bounce 4s infinite linear;
   animation: bounce 4s infinite linear;
   cursor: crosshair;
+  display: none;
+}
+#start {
+  position: absolute;
+  top: 40%;
+  left: 40%;
 }
 #result {
   position: absolute;
   left: 60px;
   top: 200px;
+}
+#high h3 {
+  text-decoration: underline;
 }
 @-webkit-keyframes bounce {
   0% { top: 0px; }

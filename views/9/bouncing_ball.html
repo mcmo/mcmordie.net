@@ -2,9 +2,20 @@
 
 <h3>Click the ball to<br />advance to the next<br />level.</h3>
 <br>
-<h4>Clicks: <span id="clicks"></span></h4>
+<div id="high">
+  <h3>Best Scores</h3>
+  <h4>Fewest Clicks: <span id='minClicks'></span></h4>
+  <h4>Fewest Seconds: <span id='minSeconds'></span></h4>
+<!--   <h4>Device Type: <span id='device'></span></h4></div> -->
+<br>
+<div id='current'>
+  <h3>Current Game</h3>
+  <h4>Clicks: <span id="clicks"></span></h4>
+  <h4>Seconds: <span id="seconds"></span></h4>
+</div>
 
 <div id='stage'>
+  <button id="start" class="btn btn-danger btn-lg">Start!</button>
   <figure id="ball"></figure>
   <div id='result'>
     <h2 id='message'></h2>
