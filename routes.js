@@ -96,4 +96,24 @@ module.exports = function(app){
   app.get('/24/email_impact', function(req, res){
     res.render('24/email_impact', {title: 'Email Impact | Chris Learns JS', style: 'email_impact', js: '/js/email_impact.js' });
   });    
+  app.get('/25/scrambled', function(req, res){
+    res.render('25/scrambled', {title: 'SCRAMBLED! | Chris Learns JS', style: 'scrambled', js: '/js/scrambled.js' });
+  });
+  app.get('/25/words.html', function(req, res){
+    var maxLength = req.query.max;
+    console.log('maxLength = ' + maxLength);
+    fs = require('fs');
+    fs.readFile('views/25/words.html', function(err, data){
+      if (err) return console.log(err);
+      var wordsArray = data.toString().split(' ');
+      var word = '';
+      var numWords = wordsArray.length;
+      while (word === '' || word.length > maxLength){
+        word = wordsArray[Math.ceil(Math.random()*numWords)];
+        console.log(word);
+        console.log(word.length);
+      }
+      res.send(word);
+    });
+  });  
 };
