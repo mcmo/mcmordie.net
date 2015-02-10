@@ -92,5 +92,8 @@ module.exports = function(app){
   });  
   app.get('/23/stopwatch', function(req, res){
     res.render('23/stopwatch', {title: 'Stopwatch | Chris Learns JS', style: 'stopwatch', js: '/js/stopwatch.js' });
-  });  
+  });
+  app.get('/24/email_impact', function(req, res){
+    res.render('24/email_impact', {title: 'Email Impact | Chris Learns JS', style: 'email_impact', js: '/js/email_impact.js' });
+  });    
 };
