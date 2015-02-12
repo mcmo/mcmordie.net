@@ -3,6 +3,7 @@ body {
   font-size: 200%;
   background-color: darkslategray;
   color: white;
+  min-height: 0;
 }
 #board {
   position: relative;

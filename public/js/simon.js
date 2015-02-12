@@ -1,25 +1,25 @@
 $(document).ready(function() {
 
   var colors = ['green', 'red', 'yellow', 'blue'];
-  var order = [], n = 0;
+  var order = [], n = 0, sound;
 
   // workaround for 300ms click delay on mobile
-  var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+  var clickOrTouch = (('ontouchend' in window)) ? 'touchstart' : 'click';
 
   $('#play').on(clickOrTouch, function() {
     $('#intro').hide();
     $('#board').show();
     
     // due to bug?, play/stop a sound to initialize? the player
-    var sound = new Howl({urls: ['/media/red.wav']}).play();
-    sound.stop();
+      sound = new Howl({urls: ['/media/red.wav']}).play();
+      sound.stop();
 
     setTimeout(addColor, 300);
   });
 
   $('.pad').on(clickOrTouch, function() {
     var color = this.id;
-    var sound = new Howl({urls: ['/media/' + color + '.wav']}).play();
+    sound = new Howl({urls: ['/media/' + color + '.wav']}).play();
     showColor(this, color);
 
     if (color === order[n++]) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     if (n < order.length) {
       setTimeout(function() {
         var color = order[n++];
-        var sound = new Howl({urls: ['/media/' + color + '.wav']}).play();
+        sound = new Howl({urls: ['/media/' + color + '.wav']}).play();
         showColor($('#' + color), color); 
         playColors();
       }, 600);
