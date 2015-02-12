@@ -117,6 +117,9 @@ module.exports = function(app){
     });
   });
   app.get('/26/simon', function(req, res){
-    res.render('26/simon', {title: 'Simon | Chris Learns JS', style: 'simon', js: '/js/simon.js' });
+    res.render('26/simon', {title: 'Simon | Chris Learns JS', style: 'simon', js: '/js/simon.js'});
   });
+  app.get('/28/click_challenge', function(req, res){
+    res.render('28/click_challenge', {title: 'Click Challenge | Chris Learns JS', style: 'click_challenge', js: '/js/click_challenge.js'});
+  });  
 };
