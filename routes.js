@@ -115,5 +115,8 @@ module.exports = function(app){
       }
       res.send(word);
     });
-  });  
+  });
+  app.get('/26/simon', function(req, res){
+    res.render('26/simon', {title: 'Simon | Chris Learns JS', style: 'simon', js: '/js/simon.js' });
+  });
 };

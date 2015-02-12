@@ -13,9 +13,9 @@ $('document').ready(function() {
   }
 
   $('#letsplay').on('click', function() {
-    getWord();
     $('#page1').hide();
     $('#page2').show();
+    getWord();
   });
 
   $('form').on('submit', function(e) {

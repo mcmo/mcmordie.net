@@ -1,0 +1,77 @@
+body {
+  text-align: center;
+  font-size: 200%;
+  background-color: darkslategray;
+  color: white;
+}
+#board {
+  position: relative;
+  width: 500px;
+/*   height: 500px; */
+  display: none;
+  margin: 30px auto 0 auto;
+}
+h1 {
+  font-size: 60px;
+}
+p {
+  font-size: 24px;
+}
+#play {
+  background-color: blue;
+  border: none;
+  font-size: 34px;
+  height: 60px;
+  width: 180px;
+}
+#green {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-color: green;
+  border-top-left-radius: 100%;
+  border: 20px solid black;
+}
+#red {
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  height: 250px;
+  width: 250px;
+  background-color: red;
+  border-top-right-radius: 100%;
+  border: 20px solid black;
+  margin-left: -10px;
+}
+#yellow {
+  position: absolute;
+  top: 250px;
+  left: 0px;
+  height: 250px;
+  width: 250px;
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+  border: 20px solid black;
+  margin-top: -10px;
+}
+#blue {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+  border: 20px solid black;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+#center {
+  position: absolute;
+  top: 175px;
+  left: 170px;
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  border-radius: 100%;
+}
