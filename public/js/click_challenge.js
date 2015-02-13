@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   });
 
-  $('body > .container').on(clickOrTouch, function(e) {
+  $('body').on(clickOrTouch, function(e) {
     $('#timer').text(++clicks);
   });
 });
