@@ -125,5 +125,8 @@ module.exports = function(app){
   app.get('/30/silly_kitty', function(req, res){
     res.render('30/silly_kitty', {title: 'Silly Kitty | Chris Learns JS', style: 'silly_kitty', js: '/js/silly_kitty.js'});
   });  
+  app.get('/31/endless_throbbers', function(req, res){
+    res.render('31/endless_throbbers', {title: 'Endless Throbbers | Chris Learns JS', style: 'endless_throbbers', js: '/js/endless_throbbers.js'});
+  });  
   
 };
