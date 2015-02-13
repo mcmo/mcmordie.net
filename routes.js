@@ -121,5 +121,9 @@ module.exports = function(app){
   });
   app.get('/28/click_challenge', function(req, res){
     res.render('28/click_challenge', {title: 'Click Challenge | Chris Learns JS', style: 'click_challenge', js: '/js/click_challenge.js'});
+  });
+  app.get('/30/silly_kitty', function(req, res){
+    res.render('30/silly_kitty', {title: 'Silly Kitty | Chris Learns JS', style: 'silly_kitty', js: '/js/silly_kitty.js'});
   });  
+  
 };

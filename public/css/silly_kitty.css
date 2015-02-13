@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+  margin: 20px auto;
+}
+#fisharea {
+  height: 10px;
+}
+#fish {
+  position: relative;
+/*   height: 100px;
+  width: 200px; */
+}
+#imcatfood {
+  position: relative;
+}
+.fade {
+  opacity: 0;
+  -webkit-animation: fade 3s linear;  
+}
+@-webkit-keyframes fade {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
+#cat {
+  position: relative;
+  top: 100px;
+}
