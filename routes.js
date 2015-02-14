@@ -127,6 +127,11 @@ module.exports = function(app){
   });  
   app.get('/31/endless_throbbers', function(req, res){
     res.render('31/endless_throbbers', {title: 'Endless Throbbers | Chris Learns JS', style: 'endless_throbbers', js: '/js/endless_throbbers.js'});
-  });  
-  
+  });
+  app.get('/33/random_word', function(req, res){
+    res.render('33/random_word', {title: 'Random Word Generator | Chris Learns JS', style: 'random_word', js: '/js/random_word.js'});
+  });
+  app.get('/33/wordsNextSteps.html', function(req, res){
+    res.sendFile(__dirname + '/views/33/wordsNextSteps.html');
+  });
 };
