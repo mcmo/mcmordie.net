@@ -6,3 +6,10 @@ h3 {
   opacity: 0.5;
   margin-top: 200px;
 }
+.spin {
+  -webkit-animation: spin .5s infinite linear;
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}

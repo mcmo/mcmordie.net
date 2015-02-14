@@ -9,6 +9,7 @@ $('document').ready(function(){
     
     $("body").append("<img id='t"+n+"' src=" + throbber + ">");
     $('#t' + n).css({'position': 'absolute', 'top': e.pageY, 'left': e.pageX});
+    if ($('#t' + n).attr('src').substr(-3) === 'png') $('#t' + n).addClass('spin');
     
     if (n === 1) msgDelay("That\'s odd. Try clicking somewhere else.");
     else if (n === 2) msgDelay("So weird! Maybe try the other side?");
